@@ -30,12 +30,13 @@
 
 package fr.zcraft.quartzlib.tools.text;
 
+import org.bukkit.ChatColor;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.EnumSet;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Set;
-import org.bukkit.ChatColor;
-import org.jetbrains.annotations.NotNull;
 
 public class ChatColorParser implements Iterator<ChatColoredString>, Iterable<ChatColoredString> {
     private final char delimiter;

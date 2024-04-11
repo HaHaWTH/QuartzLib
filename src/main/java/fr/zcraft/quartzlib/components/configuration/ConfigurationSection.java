@@ -31,12 +31,7 @@
 package fr.zcraft.quartzlib.components.configuration;
 
 import java.lang.reflect.Field;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class ConfigurationSection
         extends ConfigurationItem<Map>

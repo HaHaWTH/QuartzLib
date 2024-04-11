@@ -31,11 +31,10 @@
 package fr.zcraft.quartzlib.tools.reflection;
 
 import fr.zcraft.quartzlib.exceptions.IncompatibleMinecraftVersionException;
-import fr.zcraft.quartzlib.tools.PluginLogger;
+import org.bukkit.entity.Player;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.lang.reflect.Parameter;
-import org.bukkit.entity.Player;
 
 
 /**

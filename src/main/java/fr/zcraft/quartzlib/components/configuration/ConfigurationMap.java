@@ -30,12 +30,8 @@
 
 package fr.zcraft.quartzlib.components.configuration;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
 
 public class ConfigurationMap<K, V> extends ConfigurationItem<Map<K, V>> implements Map<K, V>, Iterable<Entry<K, V>> {
     private final Class<K> keyType;

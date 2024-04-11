@@ -33,15 +33,16 @@ package fr.zcraft.quartzlib.core;
 import com.google.common.collect.ImmutableSet;
 import fr.zcraft.quartzlib.components.events.FutureEvents;
 import fr.zcraft.quartzlib.tools.PluginLogger;
-import java.util.ArrayList;
-import java.util.Set;
-import java.util.concurrent.CopyOnWriteArraySet;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.server.PluginDisableEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 public abstract class QuartzLib {
     private static final ArrayList<Class<? extends QuartzComponent>> componentsToLoad = new ArrayList<>();

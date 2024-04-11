@@ -30,11 +30,11 @@
 
 package fr.zcraft.quartzlib.components.worker;
 
-import fr.zcraft.quartzlib.core.QuartzLib;
+import com.github.Anon8281.universalScheduler.scheduling.tasks.MyScheduledTask;
+import fr.zcraft.quartzlib.core.QuartzPlugin;
+
 import java.util.ArrayDeque;
 import java.util.HashMap;
-import org.bukkit.Bukkit;
-import org.bukkit.scheduler.BukkitTask;
 
 class WorkerCallbackManager implements Runnable {
     private static final int WATCH_LOOP_DELAY = 5;
@@ -44,7 +44,7 @@ class WorkerCallbackManager implements Runnable {
 
     private final String name;
 
-    private BukkitTask selfTask;
+    private MyScheduledTask selfTask;
 
     public WorkerCallbackManager(String name) {
         callbacks = new HashMap<>();
@@ -53,7 +53,7 @@ class WorkerCallbackManager implements Runnable {
     }
 
     public void init() {
-        selfTask = Bukkit.getScheduler().runTaskTimer(QuartzLib.getPlugin(), this, 0, WATCH_LOOP_DELAY);
+        selfTask = QuartzPlugin.getScheduler().runTaskTimer(this, 0, WATCH_LOOP_DELAY);
     }
 
     public void setupCallback(WorkerRunnable runnable, WorkerCallback callback) {

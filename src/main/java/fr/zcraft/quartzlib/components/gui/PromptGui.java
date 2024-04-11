@@ -34,8 +34,6 @@ import fr.zcraft.quartzlib.tools.Callback;
 import fr.zcraft.quartzlib.tools.PluginLogger;
 import fr.zcraft.quartzlib.tools.reflection.Reflection;
 import fr.zcraft.quartzlib.tools.runners.RunTask;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -46,6 +44,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.SignChangeEvent;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 
 public class PromptGui extends GuiBase {

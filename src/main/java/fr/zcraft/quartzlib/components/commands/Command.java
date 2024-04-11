@@ -34,19 +34,14 @@ import fr.zcraft.quartzlib.components.commands.CommandException.Reason;
 import fr.zcraft.quartzlib.components.rawtext.RawText;
 import fr.zcraft.quartzlib.core.QuartzLib;
 import fr.zcraft.quartzlib.tools.text.RawMessage;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.UUID;
-import java.util.function.Consumer;
-import java.util.regex.Pattern;
 import org.apache.commons.lang3.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.regex.Pattern;
 
 public abstract class Command {
     private static final Pattern FLAG_PATTERN = Pattern.compile("(--?)[a-zA-Z0-9-]+");

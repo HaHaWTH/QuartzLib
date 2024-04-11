@@ -1,7 +1,0 @@
-name: zToaster
-main: fr.zcraft.quartzlib.Toaster
-version: 0.99
-
-commands:
-   toaster:
-      description: Toaster Interface

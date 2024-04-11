@@ -30,6 +30,7 @@
 
 package fr.zcraft.quartzlib.components.scoreboard;
 
+import com.github.Anon8281.universalScheduler.scheduling.tasks.MyScheduledTask;
 import com.google.common.collect.ImmutableSet;
 import fr.zcraft.quartzlib.components.scoreboard.sender.ObjectiveSender;
 import fr.zcraft.quartzlib.components.scoreboard.sender.SidebarObjective;
@@ -38,19 +39,13 @@ import fr.zcraft.quartzlib.exceptions.IncompatibleMinecraftVersionException;
 import fr.zcraft.quartzlib.tools.PluginLogger;
 import fr.zcraft.quartzlib.tools.runners.RunAsyncTask;
 import fr.zcraft.quartzlib.tools.runners.RunTask;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArraySet;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitTask;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 
 /**
@@ -83,7 +78,7 @@ public abstract class Sidebar {
     private boolean automaticDeduplication = true;
     private boolean async = false;
     private long autoRefreshDelay = 0;
-    private BukkitTask refreshTask = null;
+    private MyScheduledTask refreshTask = null;
     // Only used if both titleMode and contentMode are global.
     private SidebarObjective globalObjective = null;
 

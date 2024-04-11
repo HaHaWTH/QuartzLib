@@ -36,13 +36,9 @@ import fr.zcraft.quartzlib.components.nbt.NBTException;
 import fr.zcraft.quartzlib.components.nbt.NBTList;
 import fr.zcraft.quartzlib.tools.reflection.NMSException;
 import fr.zcraft.quartzlib.tools.reflection.Reflection;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.UUID;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.*;
 
 /**
  * This class represents an item's attribute list, and provides a few static

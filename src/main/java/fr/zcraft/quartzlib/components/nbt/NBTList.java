@@ -32,13 +32,9 @@ package fr.zcraft.quartzlib.components.nbt;
 
 import fr.zcraft.quartzlib.tools.PluginLogger;
 import fr.zcraft.quartzlib.tools.reflection.Reflection;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.NoSuchElementException;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.*;
 
 
 /**

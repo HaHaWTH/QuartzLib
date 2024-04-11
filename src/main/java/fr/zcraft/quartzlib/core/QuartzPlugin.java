@@ -30,13 +30,16 @@
 
 package fr.zcraft.quartzlib.core;
 
+import com.github.Anon8281.universalScheduler.UniversalScheduler;
+import com.github.Anon8281.universalScheduler.scheduling.schedulers.TaskScheduler;
 import fr.zcraft.quartzlib.tools.PluginLogger;
-import java.io.File;
-import java.io.IOException;
-import java.util.jar.JarFile;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.java.JavaPluginLoader;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.jar.JarFile;
 
 /**
  * The base class of any plugin using QuartzLib.
@@ -49,6 +52,11 @@ public abstract class QuartzPlugin extends JavaPlugin {
     protected QuartzPlugin() {
         super();
     }
+    private static TaskScheduler scheduler;
+
+    public static TaskScheduler getScheduler() {
+        return scheduler;
+    }
 
     protected QuartzPlugin(JavaPluginLoader loader, PluginDescriptionFile description, File dataFolder, File file) {
         super(loader, description, dataFolder, file);
@@ -56,6 +64,7 @@ public abstract class QuartzPlugin extends JavaPlugin {
 
     @Override
     public void onLoad() {
+        scheduler = UniversalScheduler.getScheduler(this);
         QuartzLib.init(this);
     }
 

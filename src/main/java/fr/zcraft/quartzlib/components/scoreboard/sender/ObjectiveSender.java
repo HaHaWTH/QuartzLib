@@ -36,13 +36,14 @@ import fr.zcraft.quartzlib.exceptions.IncompatibleMinecraftVersionException;
 import fr.zcraft.quartzlib.tools.PluginLogger;
 import fr.zcraft.quartzlib.tools.reflection.NMSNetwork;
 import fr.zcraft.quartzlib.tools.reflection.Reflection;
+import org.apache.commons.lang3.Validate;
+import org.bukkit.entity.Player;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
-import org.apache.commons.lang3.Validate;
-import org.bukkit.entity.Player;
 
 
 /**

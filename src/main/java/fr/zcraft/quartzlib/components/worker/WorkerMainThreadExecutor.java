@@ -30,29 +30,25 @@
 
 package fr.zcraft.quartzlib.components.worker;
 
-import fr.zcraft.quartzlib.core.QuartzLib;
+import com.github.Anon8281.universalScheduler.scheduling.tasks.MyScheduledTask;
+import fr.zcraft.quartzlib.core.QuartzPlugin;
+
 import java.util.ArrayDeque;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-import org.bukkit.Bukkit;
-import org.bukkit.scheduler.BukkitTask;
+import java.util.concurrent.*;
 
 class WorkerMainThreadExecutor implements Runnable {
     private static final int WATCH_LOOP_DELAY = 1;
 
     private final String name;
     private final ArrayDeque<WorkerFuture> mainThreadQueue = new ArrayDeque<>();
-    private BukkitTask mainThreadTask;
+    private MyScheduledTask mainThreadTask;
 
     public WorkerMainThreadExecutor(String name) {
         this.name = name;
     }
 
     public void init() {
-        mainThreadTask = Bukkit.getScheduler().runTaskTimer(QuartzLib.getPlugin(), this, 0, WATCH_LOOP_DELAY);
+        mainThreadTask = QuartzPlugin.getScheduler().runTaskTimer(this, 0, WATCH_LOOP_DELAY);
     }
 
     public void exit() {

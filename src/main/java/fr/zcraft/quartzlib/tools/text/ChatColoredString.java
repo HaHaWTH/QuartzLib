@@ -30,11 +30,12 @@
 
 package fr.zcraft.quartzlib.tools.text;
 
+import org.bukkit.ChatColor;
+
 import java.util.Collection;
 import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Set;
-import org.bukkit.ChatColor;
 
 public class ChatColoredString {
     private final Set<ChatColor> modifiers;

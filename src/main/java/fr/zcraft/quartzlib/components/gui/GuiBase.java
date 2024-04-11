@@ -32,9 +32,10 @@ package fr.zcraft.quartzlib.components.gui;
 
 import fr.zcraft.quartzlib.components.i18n.I18n;
 import fr.zcraft.quartzlib.core.QuartzLib;
-import java.util.Locale;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+
+import java.util.Locale;
 
 public abstract class GuiBase {
     /**

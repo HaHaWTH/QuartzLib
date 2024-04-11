@@ -31,15 +31,11 @@
 package fr.zcraft.quartzlib.components.nbt;
 
 import fr.zcraft.quartzlib.tools.PluginLogger;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
+
+import java.lang.reflect.Method;
+import java.util.*;
 
 /**
  * This class represents the NBT Compound tag type.

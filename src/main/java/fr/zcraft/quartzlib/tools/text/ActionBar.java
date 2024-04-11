@@ -30,13 +30,14 @@
 
 package fr.zcraft.quartzlib.tools.text;
 
-import fr.zcraft.quartzlib.core.QuartzLib;
+import com.github.Anon8281.universalScheduler.scheduling.tasks.MyScheduledTask;
+import fr.zcraft.quartzlib.core.QuartzPlugin;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitTask;
 
 
 /**
@@ -46,7 +47,7 @@ public final class ActionBar {
     private static final Map<UUID, String> actionMessages = new ConcurrentHashMap<>();
 
     private static Runnable actionMessagesUpdater = null;
-    private static BukkitTask actionMessagesUpdaterTask = null;
+    private static MyScheduledTask actionMessagesUpdaterTask = null;
 
 
     private ActionBar() {
@@ -172,7 +173,7 @@ public final class ActionBar {
             actionMessagesUpdaterTask = null;
         } else if (messagesCount > 0 && actionMessagesUpdaterTask == null) {
             actionMessagesUpdaterTask =
-                    Bukkit.getScheduler().runTaskTimer(QuartzLib.getPlugin(), actionMessagesUpdater, 20, 30);
+                    QuartzPlugin.getScheduler().runTaskTimer(actionMessagesUpdater, 20, 30);
         }
     }
 }

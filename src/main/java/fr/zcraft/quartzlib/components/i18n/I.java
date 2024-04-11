@@ -30,8 +30,9 @@
 
 package fr.zcraft.quartzlib.components.i18n;
 
-import java.util.Locale;
 import org.bukkit.entity.Player;
+
+import java.util.Locale;
 
 /**
  * A shortcut to translate texts.

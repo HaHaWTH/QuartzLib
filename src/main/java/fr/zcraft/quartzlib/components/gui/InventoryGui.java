@@ -33,7 +33,6 @@ package fr.zcraft.quartzlib.components.gui;
 import fr.zcraft.quartzlib.tools.items.InventoryUtils;
 import fr.zcraft.quartzlib.tools.reflection.Reflection;
 import fr.zcraft.quartzlib.tools.runners.RunTask;
-import java.lang.reflect.InvocationTargetException;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -43,6 +42,8 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryView;
+
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * This class provides the basic needs for chest-type GUIs.

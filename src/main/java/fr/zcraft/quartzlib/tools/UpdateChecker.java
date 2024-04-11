@@ -30,24 +30,13 @@
 
 package fr.zcraft.quartzlib.tools;
 
+import com.github.Anon8281.universalScheduler.scheduling.tasks.MyScheduledTask;
 import fr.zcraft.quartzlib.components.i18n.I;
 import fr.zcraft.quartzlib.components.rawtext.RawText;
 import fr.zcraft.quartzlib.core.QuartzLib;
 import fr.zcraft.quartzlib.tools.runners.RunAsyncTask;
 import fr.zcraft.quartzlib.tools.runners.RunTask;
 import fr.zcraft.quartzlib.tools.text.MessageSender;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.UUID;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -56,7 +45,14 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.permissions.ServerOperator;
-import org.bukkit.scheduler.BukkitTask;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.*;
 
 public final class UpdateChecker implements Listener {
     private static final Set<UUID> notificationSentTo = new HashSet<>();
@@ -67,7 +63,7 @@ public final class UpdateChecker implements Listener {
     private static PlayerNotificationSender playerNotificationSender;
     private static PlayerNotificationFilter playerNotificationFilter;
 
-    private static BukkitTask checkTask = null;
+    private static MyScheduledTask checkTask = null;
 
     private UpdateChecker() {
     }

@@ -32,6 +32,7 @@ package fr.zcraft.quartzlib.components.attributes;
 
 import fr.zcraft.quartzlib.components.nbt.NBT;
 import fr.zcraft.quartzlib.components.nbt.NBTCompound;
+
 import java.util.UUID;
 
 /**

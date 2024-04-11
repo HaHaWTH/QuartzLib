@@ -30,12 +30,9 @@
 
 package fr.zcraft.quartzlib.components.scoreboard.sender;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
 import org.apache.commons.lang3.Validate;
+
+import java.util.*;
 
 
 /**

@@ -30,6 +30,8 @@
 
 package fr.zcraft.quartzlib.components.i18n.translators.properties;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -37,7 +39,6 @@ import java.io.InputStream;
 import java.util.Locale;
 import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
-import org.apache.commons.lang3.StringUtils;
 
 
 public class ZLibResourceBundleControl extends ResourceBundle.Control {

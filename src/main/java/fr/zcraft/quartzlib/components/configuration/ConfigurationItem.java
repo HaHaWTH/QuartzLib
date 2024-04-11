@@ -32,10 +32,11 @@ package fr.zcraft.quartzlib.components.configuration;
 
 import fr.zcraft.quartzlib.tools.PluginLogger;
 import fr.zcraft.quartzlib.tools.reflection.Reflection;
+import org.bukkit.configuration.file.FileConfiguration;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import org.bukkit.configuration.file.FileConfiguration;
 
 
 /**

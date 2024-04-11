@@ -30,18 +30,18 @@
 
 package fr.zcraft.quartzlib.tools.runners;
 
+import com.github.Anon8281.universalScheduler.UniversalRunnable;
+import com.github.Anon8281.universalScheduler.scheduling.schedulers.TaskScheduler;
+import com.github.Anon8281.universalScheduler.scheduling.tasks.MyScheduledTask;
 import fr.zcraft.quartzlib.core.QuartzLib;
-import org.bukkit.Bukkit;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitScheduler;
-import org.bukkit.scheduler.BukkitTask;
+import fr.zcraft.quartzlib.core.QuartzPlugin;
 
 
 /**
  * This utility class shortens the code used to execute tasks.
  */
 public final class RunTask {
-    private static final BukkitScheduler scheduler = Bukkit.getScheduler();
+    private static final TaskScheduler scheduler = QuartzPlugin.getScheduler();
 
     private RunTask() {
     }
@@ -52,8 +52,8 @@ public final class RunTask {
      * @param runnable The task to be run.
      * @return The BukkitTask that will run.
      */
-    public static BukkitTask nextTick(Runnable runnable) {
-        return scheduler.runTask(QuartzLib.getPlugin(), runnable);
+    public static MyScheduledTask nextTick(Runnable runnable) {
+        return scheduler.runTask(runnable);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class RunTask {
      * @param runnable The task to be run.
      * @return The BukkitTask that will run.
      */
-    public static BukkitTask nextTick(BukkitRunnable runnable) {
+    public static MyScheduledTask nextTick(UniversalRunnable runnable) {
         return runnable.runTask(QuartzLib.getPlugin());
     }
 
@@ -73,8 +73,8 @@ public final class RunTask {
      * @param delay    The ticks to wait before running the task.
      * @return The BukkitTask that will run.
      */
-    public static BukkitTask later(Runnable runnable, long delay) {
-        return scheduler.runTaskLater(QuartzLib.getPlugin(), runnable, delay);
+    public static MyScheduledTask later(Runnable runnable, long delay) {
+        return scheduler.runTaskLater(runnable, delay);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class RunTask {
      * @param delay    The ticks to wait before running the task.
      * @return The BukkitTask that will run.
      */
-    public static BukkitTask later(BukkitRunnable runnable, long delay) {
+    public static MyScheduledTask later(UniversalRunnable runnable, long delay) {
         return runnable.runTaskLater(QuartzLib.getPlugin(), delay);
     }
 
@@ -97,8 +97,8 @@ public final class RunTask {
      * @param period   The ticks to wait between runs
      * @return The BukkitTask that will run.
      */
-    public static BukkitTask timer(Runnable runnable, long wait, long period) {
-        return scheduler.runTaskTimer(QuartzLib.getPlugin(), runnable, wait, period);
+    public static MyScheduledTask timer(Runnable runnable, long wait, long period) {
+        return scheduler.runTaskTimer(runnable, wait, period);
     }
 
     /**
@@ -110,7 +110,7 @@ public final class RunTask {
      * @param period   The ticks to wait between runs
      * @return The BukkitTask that will run.
      */
-    public static BukkitTask timer(BukkitRunnable runnable, long wait, long period) {
+    public static MyScheduledTask timer(UniversalRunnable runnable, long wait, long period) {
         return runnable.runTaskTimer(QuartzLib.getPlugin(), wait, period);
     }
 }

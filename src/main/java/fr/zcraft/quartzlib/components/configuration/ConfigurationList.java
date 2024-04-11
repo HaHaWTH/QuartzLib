@@ -30,11 +30,7 @@
 
 package fr.zcraft.quartzlib.components.configuration;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class ConfigurationList<T> extends ConfigurationItem<List<T>> implements List<T> {
     private final Class<T> itemType;

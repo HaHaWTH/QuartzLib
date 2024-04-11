@@ -31,19 +31,16 @@
 package fr.zcraft.quartzlib.components.commands;
 
 import fr.zcraft.quartzlib.tools.PluginLogger;
-import java.io.InputStream;
-import java.lang.reflect.Constructor;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
 import org.apache.commons.lang3.StringUtils;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.InputStream;
+import java.lang.reflect.Constructor;
+import java.util.*;
 
 
 public class CommandGroup implements TabCompleter, CommandExecutor {

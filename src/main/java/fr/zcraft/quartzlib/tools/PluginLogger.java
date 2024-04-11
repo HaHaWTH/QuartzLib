@@ -31,6 +31,7 @@
 package fr.zcraft.quartzlib.tools;
 
 import fr.zcraft.quartzlib.core.QuartzLib;
+
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;

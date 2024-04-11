@@ -32,9 +32,10 @@ package fr.zcraft.quartzlib.components.commands;
 
 import fr.zcraft.quartzlib.core.QuartzComponent;
 import fr.zcraft.quartzlib.core.QuartzLib;
+import org.bukkit.command.CommandSender;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.bukkit.command.CommandSender;
 
 public class Commands extends QuartzComponent {
     public static final String CHAT_PREFIX = "┃";

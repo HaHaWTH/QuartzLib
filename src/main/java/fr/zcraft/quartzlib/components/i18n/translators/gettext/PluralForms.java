@@ -38,13 +38,14 @@
 package fr.zcraft.quartzlib.components.i18n.translators.gettext;
 
 import fr.zcraft.quartzlib.tools.PluginLogger;
-import java.util.Locale;
-import java.util.function.Function;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import java.util.Locale;
+import java.util.function.Function;
 
 public class PluralForms {
     /**
